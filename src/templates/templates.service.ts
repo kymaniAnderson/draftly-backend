@@ -7,7 +7,9 @@ export class TemplatesService {
   constructor(private readonly databaseService: DatabaseService) {}
 
   async findAll() {
-    return this.databaseService.template.findMany();
+    return this.databaseService.template.findMany({
+      include: { sections: true },
+    });
   }
 
   async findOne(id: string) {

@@ -63,6 +63,12 @@ export class UsersService {
   }
 
   async remove(id: string) {
+    const { count } = await this.databaseService.proposal.deleteMany({
+      where: {
+        userId: id,
+      },
+    });
+    console.log(`deleted: ${count}`);
     return this.databaseService.user.delete({
       where: {
         id,
