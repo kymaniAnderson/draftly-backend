@@ -25,7 +25,7 @@ export class ProposalsController {
   }
 
   @Post()
-  create(@Body() createProposalDto: Prisma.ProposalCreateInput) {
+  create(@Body() createProposalDto: any) {
     return this.proposalsService.create(createProposalDto);
   }
 

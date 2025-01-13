@@ -24,6 +24,7 @@ let TemplatesService = class TemplatesService {
             where: {
                 id,
             },
+            include: { sections: true },
         });
     }
     async create(createTemplateDto) {

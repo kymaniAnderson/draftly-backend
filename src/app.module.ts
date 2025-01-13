@@ -5,9 +5,15 @@ import { UsersModule } from './users/users.module';
 import { DatabaseModule } from './database/database.module';
 import { TemplatesModule } from './templates/templates.module';
 import { ProposalsModule } from './proposals/proposals.module';
-
+import { ConfigModule } from '@nestjs/config';
 @Module({
-  imports: [UsersModule, DatabaseModule, TemplatesModule, ProposalsModule],
+  imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
+    UsersModule,
+    DatabaseModule,
+    TemplatesModule,
+    ProposalsModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

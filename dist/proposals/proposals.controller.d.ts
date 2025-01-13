@@ -5,46 +5,50 @@ export declare class ProposalsController {
     constructor(proposalsService: ProposalsService);
     findAll(): Promise<{
         id: string;
-        createdAt: Date;
-        updatedAt: Date;
         title: string;
-        content: Prisma.JsonValue;
+        userContext: string;
+        content: Prisma.JsonValue[];
         templateId: string;
         userId: string;
+        createdAt: Date;
+        updatedAt: Date;
     }[]>;
     findOne(id: string): Promise<{
         id: string;
-        createdAt: Date;
-        updatedAt: Date;
         title: string;
-        content: Prisma.JsonValue;
+        userContext: string;
+        content: Prisma.JsonValue[];
         templateId: string;
         userId: string;
+        createdAt: Date;
+        updatedAt: Date;
     }>;
-    create(createProposalDto: Prisma.ProposalCreateInput): Promise<{
+    create(createProposalDto: any): Promise<{
         id: string;
-        createdAt: Date;
-        updatedAt: Date;
         title: string;
-        content: Prisma.JsonValue;
+        userContext: string;
+        content: Prisma.JsonValue[];
         templateId: string;
         userId: string;
+        createdAt: Date;
+        updatedAt: Date;
     }>;
     update(id: string, updateProposalDto: Prisma.ProposalUpdateInput): Promise<{
         id: string;
-        name: string;
         createdAt: Date;
         updatedAt: Date;
+        name: string;
         rating: number;
         hashtags: string[];
     }>;
     remove(id: string): Promise<{
         id: string;
-        createdAt: Date;
-        updatedAt: Date;
         title: string;
-        content: Prisma.JsonValue;
+        userContext: string;
+        content: Prisma.JsonValue[];
         templateId: string;
         userId: string;
+        createdAt: Date;
+        updatedAt: Date;
     }>;
 }

@@ -12,6 +12,13 @@ export declare class TemplatesService {
         hashtags: string[];
     }[]>;
     findOne(id: string): Promise<{
+        sections: {
+            id: string;
+            title: string;
+            templateId: string;
+            description: string;
+        }[];
+    } & {
         id: string;
         name: string;
         createdAt: Date;

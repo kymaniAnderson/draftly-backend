@@ -17,7 +17,8 @@ export declare class UsersService {
             createdAt: Date;
             updatedAt: Date;
             title: string;
-            content: Prisma.JsonValue;
+            userContext: string;
+            content: Prisma.JsonValue[];
             templateId: string;
             userId: string;
         }[];
@@ -35,7 +36,8 @@ export declare class UsersService {
             createdAt: Date;
             updatedAt: Date;
             title: string;
-            content: Prisma.JsonValue;
+            userContext: string;
+            content: Prisma.JsonValue[];
             templateId: string;
             userId: string;
         }[];
@@ -53,7 +55,8 @@ export declare class UsersService {
             createdAt: Date;
             updatedAt: Date;
             title: string;
-            content: Prisma.JsonValue;
+            userContext: string;
+            content: Prisma.JsonValue[];
             templateId: string;
             userId: string;
         }[];

@@ -14,12 +14,19 @@ const users_module_1 = require("./users/users.module");
 const database_module_1 = require("./database/database.module");
 const templates_module_1 = require("./templates/templates.module");
 const proposals_module_1 = require("./proposals/proposals.module");
+const config_1 = require("@nestjs/config");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [users_module_1.UsersModule, database_module_1.DatabaseModule, templates_module_1.TemplatesModule, proposals_module_1.ProposalsModule],
+        imports: [
+            config_1.ConfigModule.forRoot({ isGlobal: true }),
+            users_module_1.UsersModule,
+            database_module_1.DatabaseModule,
+            templates_module_1.TemplatesModule,
+            proposals_module_1.ProposalsModule,
+        ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })

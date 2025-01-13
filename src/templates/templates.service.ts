@@ -15,6 +15,7 @@ export class TemplatesService {
       where: {
         id,
       },
+      include: { sections: true },
     });
   }
 
