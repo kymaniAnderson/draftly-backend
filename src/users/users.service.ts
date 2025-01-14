@@ -20,7 +20,7 @@ export class UsersService {
   async findOne(id: string) {
     const user = this.databaseService.user.findUnique({
       where: {
-        id,
+        authKey: id,
       },
       include: {
         proposals: true,

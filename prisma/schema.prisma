@@ -13,7 +13,7 @@ model User{
   authKey   String    @unique
   name      String
   email     String    @unique
-  role      Role
+  role      Role      @default(CREATOR)
   proposals Proposal[]
 
   createdAt DateTime  @default(now())

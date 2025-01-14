@@ -53,6 +53,12 @@ export class TemplatesService {
   }
 
   async remove(id: string) {
+    const { count } = await this.databaseService.section.deleteMany({
+      where: {
+        templateId: id,
+      },
+    });
+    console.log(`deleted: ${count}`);
     return this.databaseService.template.delete({
       where: {
         id,
