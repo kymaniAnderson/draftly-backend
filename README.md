@@ -1,4 +1,4 @@
-# ✏️ Draftly - AI-Assisted Proposal Generator (Nest.js with Prisma and Neon/Postgres)
+# ✏️ Draftly - AI-Assisted Proposal Generator (Nestjs | Prisma | Neon | Postgres)
 
 ### 📄 Description
 Draftly is a web application designed to help users create professional proposals with AI assistance. This version uses **Nestjs** and integrates **Prisma** as the ORM as well as Neon to host the postgres server.
